@@ -1,69 +1,92 @@
-/* === BOSANGKA DARK MODE CSS === */
+/* ============================
+   BOSANGKA DARK MODE — ME-PAGE
+   Full Override Version
+   ============================ */
 
-body {
-    background: #0b0b0d;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Container utama */
-.main-container, .page-wrapper, .section {
+/* GLOBAL OVERRIDE */
+html, body {
     background: #0b0b0d !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif !important;
 }
 
-/* Judul */
-h1, h2, h3, .title, .header-title {
+/* Override SEMUA warna default */
+* {
+    color: #ffffff !important;
+    border-color: #00aaff !important;
+}
+
+/* Hilangi background bawaan Me-Page */
+div, section, header, main, footer {
+    background: transparent !important;
+}
+
+/* CARD / WRAPPER */
+[class*="card"],
+[class*="wrapper"],
+[class*="container"],
+[class*="block"],
+[class*="box"] {
+    background: #111117 !important;
+    border-radius: 14px !important;
+    padding: 10px !important;
+    border: 1px solid #1c1c22 !important;
+}
+
+/* JUDUL */
+h1, h2, h3 {
     color: #ffffff !important;
 }
 
-/* Deskripsi */
-p, .description, .subtitle {
+/* DESKRIPSI */
+p, span {
     color: #d9d9d9 !important;
 }
 
-/* Tombol */
-button, a.btn, .button, .link-button {
+/* TOMBOL ME-PAGE */
+a[class*="button"],
+button,
+[class*="btn"] {
     background: #00aaff !important;
     color: #ffffff !important;
-    border-radius: 10px !important;
-    padding: 12px 20px !important;
     border: none !important;
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+    font-weight: bold !important;
     text-decoration: none !important;
-    font-weight: bold;
-    box-shadow: 0 0 15px #0095dd;
-    transition: .2s;
+    box-shadow: 0 0 18px rgba(0, 170, 255, 0.7) !important;
+    transition: 0.2s !important;
 }
 
+/* Hover tombol */
+a[class*="button"]:hover,
 button:hover,
-a.btn:hover,
-.button:hover,
-.link-button:hover {
+[class*="btn"]:hover {
     background: #33bbff !important;
-    box-shadow: 0 0 25px #33bbff;
+    box-shadow: 0 0 25px rgba(51, 187, 255, 1) !important;
 }
 
-/* Card */
-.card, .item-box, .link-card {
-    background: #101014 !important;
-    border-radius: 14px;
-    padding: 15px;
-    border: 1px solid #1d1d25;
-    color: #ffffff !important;
-}
-
-/* Input */
-input, textarea, select {
-    background: #1a1a1f !important;
-    border: 1px solid #333 !important;
-    color: #fff !important;
-    border-radius: 8px !important;
-    padding: 10px;
-}
-
-/* Link biasa */
+/* LINK */
 a {
     color: #4ecaff !important;
+}
+
+/* INPUT */
+input, textarea, select {
+    background: #1a1a1f !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+}
+
+/* GAMBAR */
+img {
+    border-radius: 12px !important;
+}
+
+/* SPASI lebih rapi */
+[class*="button"],
+[class*="btn"],
+a {
+    margin-bottom: 10px !important;
 }
