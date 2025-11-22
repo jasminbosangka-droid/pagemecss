@@ -1,58 +1,11 @@
-// =====================
-// Load CSS dari GitHub Raw
-// =====================
-(function() {
-  const url = "https://raw.githubusercontent.com/jasminbosangka-droid/REPO/BRANCH/path/to/style.css";
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = url;
-  document.head.appendChild(link);
-})();
+.gold {
+  background: linear-gradient(90deg, #ffd700, #ffb700, #ffe47a, #ffd700);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
 
-// =====================
-// Spawn koin animasi (sama seperti sebelumnya)
-// =====================
-(function(){
-  const COIN_COUNT = 20;
-  const container = document.body;
-  function rand(min, max) { return Math.random()*(max-min) + min; }
-
-  for (let i = 0; i < COIN_COUNT; i++) {
-    const c = document.createElement('div');
-    c.className = 'coin';
-    c.textContent = '₵';
-    const startX = rand(5, 95);
-    c.style.left = startX + 'vw';
-    const size = rand(20, 44);
-    c.style.width = size + 'px';
-    c.style.height = size + 'px';
-    c.style.fontSize = Math.max(10, size / 2.5) + 'px';
-    const delay = rand(0, 6), duration = rand(4, 9);
-    c.style.animation = `fall ${duration}s linear ${delay}s forwards`;
-    const drift = rand(-12, 12);
-    c.style.transform = `translateY(-40vh) translateX(${drift}px)`;
-    container.appendChild(c);
-    c.addEventListener('animationend', () => c.remove());
-  }
-
-  container.addEventListener('click', () => {
-    for (let i = 0; i < 8; i++) {
-      const c = document.createElement('div');
-      c.className = 'coin';
-      c.textContent = '₵';
-      const startX = rand(10, 90);
-      c.style.left = startX + 'vw';
-      const size = rand(18, 40);
-      c.style.width = size + 'px';
-      c.style.height = size + 'px';
-      c.style.fontSize = Math.max(10, size / 2.5) + 'px';
-      const delay = rand(0, 0.6), duration = rand(3, 6);
-      c.style.animation = `fall ${duration}s linear ${delay}s forwards`;
-      const drift = rand(-18, 18);
-      c.style.transform = `translateY(-40vh) translateX(${drift}px)`;
-      container.appendChild(c);
-      c.addEventListener('animationend', () => c.remove());
-    }
-  });
-})();
+@keyframes shine {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
